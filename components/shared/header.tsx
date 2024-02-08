@@ -7,7 +7,6 @@ const header = () => {
   return (
     <header className="h-full border-b">
       <div className="wrapper flex items-center justify-between">
-        
         <Link href="/" className="w-36">
           <Image
             src="/assets/images/logo.svg"
@@ -18,9 +17,11 @@ const header = () => {
         </Link>
 
         <div className="flex w-32 justify-end gap-3">
-          <SignedOut>
+        <SignedOut>
             <Button asChild className="rounded-full" size="lg">
-              <Link href="/sign-in">Login</Link>
+              <Link href="/sign-in">
+                Login
+              </Link>
             </Button>
           </SignedOut>
         </div>
