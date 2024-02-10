@@ -1,6 +1,7 @@
+
 import Footer from "@/components/shared/Footer"
 import Header from "@/components/shared/Header"
-import { ClerkProvider } from "@clerk/nextjs"
+import { ClerkProvider, SignedIn } from "@clerk/nextjs"
 
 export default function RootLayout({
   children,
@@ -8,12 +9,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <ClerkProvider>
+   
+
+    
     <div className="flex h-screen flex-col">
       <Header />
       <main className="flex-1">{children}</main>
       <Footer />
     </div>
-    </ClerkProvider>
+    
   )
 }
